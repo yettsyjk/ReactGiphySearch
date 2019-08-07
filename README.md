@@ -37,7 +37,7 @@ Clicking a gif should open a `Details` modal with lots of info about that partic
     * Each search should have an `x` next to it that removes it from the history when clicked.
     * Users that are not logged in should not be able to access the pop-out menu.
    
-## Are you insane?
+## If you really just can't get enough....
 
 3. Read up about Firebase and store your search histories and login info there instead.  Don't worry about security.
 
