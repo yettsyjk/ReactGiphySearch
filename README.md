@@ -14,16 +14,19 @@ There should be a search bar with a button. When the user presses enter or the b
 
 ### Step 1: Set up the app
 
-1. Fork and clone this repo to you `homework` directory.
-2. Navigate inside, and run: `npx create-react-app react-giphy-search`
-3. `cd react-giphy-search`
-4. Open the code in your editor.
+- Fork and clone this repo to your `homework` directory.
+- Navigate inside and run: `npx create-react-app react-giphy-search`
+- `cd react-giphy-search`
+- Open the code in your editor.
+- Run `npm start`
+- Commit your work
 
 ### Step 2: Create a `SearchContainer` component
 
 - Create a new `SearchContainer` component.
 - Import `SearchContainer` into `App.js`.
 - Render `SearchContainer` inside `App.js`.
+- Commit your work
 
 ### Step 3: Add UI for the Search component
 
@@ -31,6 +34,7 @@ There should be a search bar with a button. When the user presses enter or the b
 - Have the `Search` component render a search form. This can be a simple form with a single input and submit button.
 - Import the `Search` component to your `SearchContainer` component.
 - Render the `Search` component in the `SearchContainer` component.
+- Commit your work
 
 ### Step 4: Wire up the search button
 
@@ -40,6 +44,7 @@ There should be a search bar with a button. When the user presses enter or the b
 - Use an event listener to attach this function to your form. Try googling `onSubmit`.
 - Update your submit function so that it now logs the `query` value in state.
 - **Hint:** Check out the [React docs for forms](https://reactjs.org/docs/forms.html).
+- Commit your work
 
 ### Step 5: Lift up your state
 
@@ -47,24 +52,31 @@ There should be a search bar with a button. When the user presses enter or the b
 - This method should take one parameter, which will be the query value from `Search`. For right now, just `console.log` the value.
 - Pass this method down to the `Search` component.
 - Call this method from inside your submit handler method that you created in **Step 4** and pass it the value of `query` in state.
+- Commit your work
 
-### Step 5: Create logic for when a user performs a search
+### Step 6: Create logic for when a user performs a search
 
 - Create a `giphys` property in the `SearchContainer` state and set its value to an empty array.
 - In the `SearchContainer` method that you created in **Step 5**, take that `query` value that was lifted up from `Search` and use it to make a `fetch` call to the Giphy API. Review the [Giphy search documentation](https://developers.giphy.com/docs/api/endpoint/#search) to see the structure of the API url, the query parameter options, and the structure of the JSON that it sends. At the bare minimum, you'll need to use the `api_key` and `q` query parameters. You can use the API key from this example: [api.giphy.com/v1/gifs/search?api_key=QjXFDP8q5BRdZP5o4pZwDjfv7g46b7ve&q=cheeseburgers](api.giphy.com/v1/gifs/search?api_key=QjXFDP8q5BRdZP5o4pZwDjfv7g46b7ve&q=cheeseburgers). When you look at the structure of the API url, how can you build that url while including the value of the query term that's being passed in?
 - Once you get the results back and parsed them, set the data as the value of `giphys`.
+- Commit your work
 
-### Step 6: Display the results
+### Step 7: Display the results
 
 - Create a `Results` component that will take in the `giphys` data and render each item's `url` from the `downsized_large` object.
 - Import the `Results` component into `SearchContainer`.
 - Render the `Results` component right underneath `Search` and pass `giphys` as a prop.
 - If a user can search for a term and return a list of images/gifs, then you're done!
+- Commit your work
+
+
+## Submit homework
+From your forked repo, create a **New pull request**.
 
 
 ## Bonus
 
-### Step 7: Add Styles to your React app
+### Step 8: Add Styles to your React app
 
 - Use semantic ui to style:
 1. `npm i semantic-ui-css`
@@ -75,12 +87,12 @@ There should be a search bar with a button. When the user presses enter or the b
 - Research how to load the Bootstrap CDN in React.
 - Modify UI to include Bootstrap classes.
 
-### Step 8: Add a single result detail component
+### Step 9: Add a single result detail component
 
 - Create a `Details` component that renders information about a single gif.
 - When a user clicks on a gif in the results view, render the `Detail` component.
 
-### Step 9: Create login/logout functionality
+### Step 10: Create login/logout functionality
 
 - Create dummy "login/logout" functionality:
     * Put some text **Login** on the top right that opens a `Login` modal.
@@ -93,7 +105,7 @@ There should be a search bar with a button. When the user presses enter or the b
     * Each search should have an `x` next to it that removes it from the history when clicked.
     * Users that are not logged in should not be able to access the pop-out menu.
    
-### Step 10: Persist the user's search history in a cloud database
+### Step 11: Persist the user's search history in a cloud database
 
 - Read up about Firebase and store your search histories and login info there instead. Don't worry about security.
 - If you didn't already, use some kind of animation for the opening and closing of the menu.
