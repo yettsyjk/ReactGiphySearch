@@ -13,7 +13,7 @@ There should be a search bar with a button. When the user presses enter or the b
 ## Instructions
 
 ### Step 1: Set up the app
-
+**DO NOT FORK THIS YET**
 - Fork and clone this repo to your `homework` directory.
 - Navigate inside and run: `npx create-react-app react-giphy-search`
 - `cd react-giphy-search`
@@ -28,7 +28,7 @@ There should be a search bar with a button. When the user presses enter or the b
 - Render `SearchContainer` inside `App.js`.
 - Commit your work
 
-### Step 3: Add UI for the Search component
+### Step 3: Add UI for the `Search` component
 
 - Create a new component called `Search`.
 - Have the `Search` component render a search form. This can be a simple form with a single input and submit button.
