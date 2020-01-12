@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
 
 
+//lift up your state
+
+//create a giphys property in the SearchContainer state
+// and set value to an empty array
 class SearchContainer extends Component {
     constructor() {
         super();

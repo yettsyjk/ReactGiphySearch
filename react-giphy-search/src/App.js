@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import SearchContainer from './SearchContainer';
+import Search from './Search';
+import GifContainer from './GifContainer';
 
-function App() {
+
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      //empty array
+      gifs: []
+  };
+}
+  getGifs = async (term) => {
+    try{
+    const response = await fetch(`http://api.giphy.com/v1/gifs/search?q=${term}&api_key=QjXFDP8q5BRdZP5o4pZwDjfv7g46b7ve&q`);
+    const parsedResponse = await Response.json()
+    this.setState({
+      gifs: parsedResponse.gif
+    })
+  } catch(err) {
+    return err
+    }
+  }
+  componentDidMount() {
+    this.getGifs()
+  }
+  render() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="searchContainer">
+        <SearchContainer />
+        </div>        
+        <div className="SearchingFor">
+        <Search />
+        </div>
+        <div className="gifContainer">
+          <GifContainer gifs={this.state.gifs}/>
+        </div>
+
       </header>
     </div>
   );
+}
 }
 
 export default App;
