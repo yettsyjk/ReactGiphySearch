@@ -7,6 +7,7 @@ h1 {
   padding-top: 20px 10px;
   font-weight: bold;
   color: #ffffff;
+  user-select: none;
 }
 .title {
   color: #ffffff;
