@@ -1,50 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SearchContainer from './SearchContainer';
-import Search from './Search';
-import GifContainer from './GifContainer';
+import './index.css';
+
+//import searchContainer in to App.js
 
 
-
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      //empty array
-      gifs: []
-  };
-}
-  getGifs = async (term) => {
-    try{
-    const response = await fetch(`http://api.giphy.com/v1/gifs/search?q=${term}&api_key=QjXFDP8q5BRdZP5o4pZwDjfv7g46b7ve&q`);
-    const parsedResponse = await Response.json()
-    this.setState({
-      gifs: parsedResponse.gif
-    })
-  } catch(err) {
-    return err
-    }
-  }
-  componentDidMount() {
-    this.getGifs()
-  }
-  render() {
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="searchContainer">
+     <div className="app">
+       <div className="searchContainer">
         <SearchContainer />
-        </div>        
-        <div className="SearchingFor">
-        <Search />
-        </div>
-        <div className="gifContainer">
-          <GifContainer gifs={this.state.gifs}/>
-        </div>
-
-      </header>
-    </div>
+      </div>
+      </div>
+       
   );
-}
 }
 
 export default App;

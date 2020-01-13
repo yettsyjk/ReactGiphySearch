@@ -1,10 +1,21 @@
 body {
   justify-content: center;
 }
-h1 h2 h3 {
+h1 {
   text-align: center;
   margin: 0px;
-  padding-top: 10px;
+  padding-top: 20px 10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.title {
+  color: #ffffff;
+}
+.searchContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5% 25px 0;
+  max-width: 500ox;
 }
 .App {
   text-align: center;
@@ -44,9 +55,22 @@ h1 h2 h3 {
     transform: rotate(360deg);
   }
 }
-.SerachingFor {
+.SearchingFor {
   text-align: center;
   color: #111111;
   justify-content: center;
   display: flex;
+}
+footer {
+  padding: 50px;
+  font-size: 14px;
+  color: #ffffff;
+}
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
