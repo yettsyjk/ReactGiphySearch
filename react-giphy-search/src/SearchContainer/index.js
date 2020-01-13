@@ -4,7 +4,7 @@ import GifContainer from '../GifContainer';
 import '../App.css';
 
 
-//lift up your state
+//the giphy search app will be contained within the SearchContainer
 
 //create a giphys property in the SearchContainer state
 // and set value to an empty array
@@ -13,6 +13,9 @@ class SearchContainer extends Component {
         super();
     this.state = { gifs: [] };
 }
+
+//create a customeized function that utilizes url for giphy search
+//modify the last element of the url to inlcude q=${query}. I tried to have q=${query} within the quert string of url and it didnt work properly
 getSelectedGifs = async (query) => {
     try{
         const gettingGif = await fetch(`http://api.giphy.com/v1/gifs/search?api_key=QjXFDP8q5BRdZP5o4pZwDjfv7g46b7ve&q=${query}`);
@@ -28,10 +31,11 @@ getSelectedGifs = async (query) => {
     return err
     }
   }
+  //render() property called getSelectedGifs set to the value {this.getSelectedGifs}
 render() {
     return (
 <React.Fragment>
-    <h1>Connecting SearchContainer</h1>
+    <h1>Giphy Search</h1>
     <Search getQuery={this.getSelectedGifs}/>
     <GifContainer data={this.state.gifs}/>
 
