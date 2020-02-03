@@ -1,18 +1,26 @@
 import React from 'react';
+import {Route, Switch} from 'react-router-dom';
+
+import Layout from './Layout';
 import SearchContainer from './SearchContainer';
+import NotFound from './NotFound';
 import './index.css';
 
 //import searchContainer in to App.js
-
-
+//dont place this.state because it requires extra lifting
+//
 function App() {
   return (
+    <main>
+      <Switch>
      <div className="app">
        <div className="searchContainer">
-        <SearchContainer />
+      <Route exact path="/" render={(props) => <SearchContainer {...props}/> }/>
+      <Route component={NotFound}/>
       </div>
       </div>
-       
+        </Switch>
+      </main>
   );
 }
 

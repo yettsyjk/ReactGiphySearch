@@ -18,6 +18,9 @@ h1 {
   padding: 5% 25px 0;
   max-width: 500ox;
 }
+.gifContainer{
+  background-color: #808080;
+}
 .App {
   text-align: center;
 }
