@@ -1,4 +1,3 @@
-![GA-Logo](https://camo.githubusercontent.com/6ce15b81c1f06d716d753a61f5db22375fa684da/68747470733a2f2f67612d646173682e73332e616d617a6f6e6177732e636f6d2f70726f64756374696f6e2f6173736574732f6c6f676f2d39663838616536633963333837313639306533333238306663663535376633332e706e67)
 
 # React Giphy Search
 
@@ -14,7 +13,7 @@ There should be a search bar with a button. When the user presses enter or the b
 
 ### Step 1: Set up the app
 
-- Fork and clone this repo to your `homework` directory.
+
 - Navigate inside and run: `npx create-react-app react-giphy-search`
 - `cd react-giphy-search`
 - Open the code in your editor.
@@ -70,42 +69,3 @@ There should be a search bar with a button. When the user presses enter or the b
 - Commit your work
 
 
-## Submit homework
-From your forked repo, create a **New pull request**.
-
-
-## Bonus
-
-### Step 8: Add Styles to your React app
-
-- Use semantic ui to style:
-1. `npm i semantic-ui-css`
-2. `npm i semantic-ui-react`
-3. Inside of `index.js` above, your `index.css`, `import 'semantic-ui-css/semantic.min.css';`
-
-- Or use Bootstrap to style:
-- Research how to load the Bootstrap CDN in React.
-- Modify UI to include Bootstrap classes.
-
-### Step 9: Add a single result detail component
-
-- Create a `Details` component that renders information about a single gif.
-- When a user clicks on a gif in the results view, render the `Detail` component.
-
-### Step 10: Create login/logout functionality
-
-- Create dummy "login/logout" functionality:
-    * Put some text **Login** on the top right that opens a `Login` modal.
-    * After the user logs in (i.e., just store their username in state, as well as a `loggedIn` boolean), the modal should disappear and the top right should now show **Logged in as [username]** and a link to **Logout**. Clicking **Logout** should change state appropriately and cause **Login** to be displayed once again.
-    * For the moment the site should work exactly the same otherwise.
-
-- Logged in users should be able view and edit their search history in a pop out menu.
-    * Store a user's searches in `localStorage`. It can only store key-value pairs as strings, so if you want to store arrays or objects, or more complex data structures, use `JSON.stringify()` before you store it, and `JSON.parse()` when retireving it.
-    * Clicking a search should load it.
-    * Each search should have an `x` next to it that removes it from the history when clicked.
-    * Users that are not logged in should not be able to access the pop-out menu.
-   
-### Step 11: Persist the user's search history in a cloud database
-
-- Read up about Firebase and store your search histories and login info there instead. Don't worry about security.
-- If you didn't already, use some kind of animation for the opening and closing of the menu.
