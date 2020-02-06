@@ -6,7 +6,7 @@ function GifContainer (props) {
     //tried the key={i} but didnt get error for key id
     return(
         props.data.map(gif => {
-            return <img className="gifContainer" src={gif.images.downsized_large.url} alt="title"/> 
+            return <img className="gifContainer" src={gif.images.downsized_large.url} alt="title of giphy search"/> 
         })
     )
 }

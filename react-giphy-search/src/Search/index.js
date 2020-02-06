@@ -59,17 +59,17 @@ class Search extends Component {
 //render is the only required method in a class component
     render() {
         return (
-    <div className="searchContainer">
-        <h3 claasName="title">Render Giphy</h3>
+            <div className="searchContainer">
+            <h2 className="title">Giphy Fun</h2>
         <form>
-    <label>Type in a search phrase :
-        <textarea type="text" name="query" placeholder="search for gifs..." onChange={this.getGif} />
+    <label className="search">Type in a search phrase :
+        <textarea className="field" type="text" name="query" placeholder="Search for gifs..." onChange={this.getGif} />
         </label>
         <button onClick={this.handleSubmit}><strong>Submit</strong></button>
         </form>
     </div>
         );
-        }
+    }
 }
 
 export default Search;
